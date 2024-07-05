@@ -1,0 +1,44 @@
+{
+  "name": "task-manager",
+  "version": "1.0.0",
+  "description": "Task management application",
+  "main": "main.js",
+  "scripts": {
+    "start": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "backend": "node backend/server.js",
+    "frontend": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "electron": "^13.0.0",
+    "express": "^4.17.1",
+    "moment-timezone": "^0.5.45",
+    "mongoose": "^5.10.9",
+    "react": "^17.0.2",
+    "react-beautiful-dnd": "^13.0.0",
+    "react-dom": "^17.0.2",
+    "react-icons": "^5.2.1",
+    "react-router-dom": "^6.24.0",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

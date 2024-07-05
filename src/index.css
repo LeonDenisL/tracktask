@@ -1,0 +1,218 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.navbar-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right a {
+  color: white;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.navbar-right a:hover {
+  color: #ddd;
+}
+
+.new-task-form {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.new-task-form input {
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.new-task-form button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+}
+
+.new-task-form button:hover {
+  background-color: #218838;
+}
+
+.task-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+.task-column {
+  flex: 1;
+  margin: 0 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 325px;
+}
+
+.task-column h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.task-card {
+  background: white;
+  padding: 30px;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  max-width: 300px;
+  width: 100%;
+  position: relative; /* Para posicionar o ícone de lápis */
+}
+
+.task-card-urgent {
+  background-color: #ffcccc;
+}
+
+.task-card-high {
+  background-color: #ffffcc;
+}
+
+.task-card-normal {
+  background-color: #f7f7f7;
+}
+
+.task-card-low {
+  background-color: #cce5ff;
+}
+
+.task-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-card-header h3 {
+  margin: 0;
+}
+
+.task-card-header .fas {
+  cursor: pointer;
+  color: #333;
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.task-card-header .fas:hover {
+  color: #000;
+}
+
+.confirmation-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.confirmation-dialog p {
+  margin-bottom: 20px;
+}
+
+.confirmation-dialog button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.confirmation-dialog button:first-child {
+  background-color: #d9534f;
+  color: white;
+}
+
+.confirmation-dialog button:last-child {
+  background-color: #5bc0de;
+  color: white;
+}
+
+.completed-tasks label {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.completed-tasks input {
+  margin: 0 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.completed-task-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+button i {
+  margin-right: 5px;
+}
